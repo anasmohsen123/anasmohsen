@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>A&M - معرض العطور</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      direction: rtl;
+    }
+
+    header {
+      background: #1a1a1a;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      height: 80vh;
+      width: 90%;
+      margin: 40px auto;
+      border: 1px solid #ccc;
+    }
+
+    .grid-item {
+      border: 1px solid #ddd;
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .grid-item img {
+      max-width: 100%;
+      max-height: 70%;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    .grid-item p {
+      font-size: 13px;
+      color: #555;
+      margin: 5px 0;
+    }
+
+    .price {
+      font-size: 13px;
+      color: #000;
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        height: auto;
+      }
+
+      .grid-item {
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>A&M للروائح</h1>
+    <nav>
+      <a href="#about">عن A&M</a>
+      <a href="#products">منتجاتنا</a>
+      <a href="#contact">اتصل بنا</a>
+    </nav>
+  </header>
+
+  <!-- شبكة المنتجات -->
+  <section id="products" class="grid-container">
+    <!-- المنتج 1 -->
+    <div class="grid-item">
+      <img src="https://flowry-store.com/wp-content/uploads/2023/05/sauvage_cropped_750x1000.webp" alt="عطر Sauvage">
+      <p>عطر Sauvage يتميز بنفحات الحمضيات والفلفل، مثالي للاستخدام اليومي.</p>
+      <p class="price">السعر: 590 ج.م</p>
+    </div>
+
+    <!-- المنتج 2 -->
+    <div class="grid-item">
+      <img src="https://alfouadpharmacies.com/cdn/shop/files/Chanel-Blue-De-Channel-Edp-FM-150ML.webp" alt="Bleu de Chanel">
+      <p>Bleu de Chanel هو عطر رجالي أنيق برائحة خشبية مع لمسة راقية.</p>
+      <p class="price">السعر: 340 ج.م</p>
+    </div>
+
+    <!-- المنتج 3 -->
+    <div class="grid-item">
+      <img src="https://m.media-amazon.com/images/I/71eYk+nysmL._AC_SY879_.jpg" alt="عطر شرقي">
+      <p>عطر شرقي فاخر يجمع بين العود والفانيليا والمسك بتركيبة عربية أصيلة.</p>
+      <p class="price">السعر: 650 ج.م</p>
+    </div>
+
+    <!-- المنتج 4 -->
+    <div class="grid-item">
+      <img src="https://m.media-amazon.com/images/I/41PKE+31HDL._AC_SX679_.jpg" alt="عطر إضافي">
+      <p>عطر أنيق يدوم طويلاً، مثالي للسهرات والمناسبات الخاصة.</p>
+      <p class="price">السعر: غير متوفر</p>
+    </div>
+  </section>
+
+</body>
+</html>
